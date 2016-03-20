@@ -1,0 +1,17 @@
+﻿Compilación iniciada a las 20/03/2016 16:35:29.
+     1>Proyecto "c:\Users\Steven\documents\visual studio 2013\Projects\Panelsito Login\Panelsito Login\Panelsito Login.vcxproj" en el nodo 2 (Build destinos).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Vista.cpp
+         Vista.cpp
+     1>c:\users\steven\documents\visual studio 2013\projects\panelsito login\panelsito login\Vista.h(175): warning C4101: 'Pass' : variable local sin referencia
+     1>c:\users\steven\documents\visual studio 2013\projects\panelsito login\panelsito login\Vista.h(224): warning C4244: 'inicializando' : conversión de 'wchar_t' a 'char'; posible pérdida de datos
+     1>c:\users\steven\documents\visual studio 2013\projects\panelsito login\panelsito login\Vista.h(231): warning C4244: '=' : conversión de 'wchar_t' a 'char'; posible pérdida de datos
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\steven\documents\visual studio 2013\Projects\Panelsito Login\Debug\Panelsito Login.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\PanelsitoLogin.Vista.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\steven\documents\visual studio 2013\Projects\Panelsito Login\Debug\Panelsito Login.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Vista.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         Panelsito Login.vcxproj -> c:\users\steven\documents\visual studio 2013\Projects\Panelsito Login\Debug\Panelsito Login.exe
+     1>Compilación del proyecto terminada "c:\Users\Steven\documents\visual studio 2013\Projects\Panelsito Login\Panelsito Login\Panelsito Login.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:02.97
