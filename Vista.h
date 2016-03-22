@@ -1,4 +1,7 @@
 #pragma once
+#include<iostream>
+#include<Windows.h>
+#include<mmsystem.h>
 
 namespace PanelsitoLogin {
 
@@ -185,6 +188,7 @@ namespace PanelsitoLogin {
 			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox6->TabIndex = 12;
 			this->pictureBox6->TabStop = false;
+			this->pictureBox6->Click += gcnew System::EventHandler(this, &Vista::pictureBox6_Click);
 			// 
 			// Vista
 			// 
@@ -209,6 +213,24 @@ namespace PanelsitoLogin {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			this->ResumeLayout(false);
 
+		}
+
+		//Subrutina para quitar espacios
+		String^ quitarEspacios(String^ Cadena){
+			int i = 0;
+			while (i < Cadena->Length)
+			{
+				if (Cadena->Substring(i, 1)->Equals(" "))
+				{
+					Cadena = Cadena->Substring(0, i) + Cadena->Substring(i + 1, (Cadena->Length - (i + 1)));
+				}
+				else
+				{
+					i++;
+				}
+				
+			}
+			return Cadena;
 		}
 
 		//Hallando la posicion de las Comas para saber el tamaño del nombre de usuario
@@ -309,8 +331,12 @@ namespace PanelsitoLogin {
 
 		//Verificacion dependiendo de condiciones
 		void verificarLogin(){
-			String^Name = textBox1->Text;
-			String^Pass = textBox2->Text;
+			String^ Name = textBox1->Text;
+			String^ Pass = textBox2->Text;
+			Name = quitarEspacios(Name);
+			Pass = quitarEspacios(Pass);
+	
+
 			if ((Pass->Length <= 0) && (Name->Length <= 0))
 			{
 				MessageBox::Show("No puedes dejar ningun campo vacio");
@@ -329,15 +355,17 @@ namespace PanelsitoLogin {
 					}
 					else
 					{
+						MessageBox::Show("Por conveniencia se ha removido los espacios que tenia su contraseña");
 						nombreValido(Name, Pass);
 					}
 				}
 			}
-			MessageBox::Show("Hola");
 		}
+
+
 #pragma endregion
 	private: System::Void Vista_Load(System::Object^  sender, System::EventArgs^  e) {
-				// groupBox1->BackColor = color
+				 PlaySound(TEXT("login.wav"), NULL, SND_ASYNC);
 	}
 
 
@@ -354,5 +382,8 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 
+private: System::Void pictureBox6_Click(System::Object^  sender, System::EventArgs^  e) {
+			 MessageBox::Show("Stop pressing this button.");
+}
 };
 }
